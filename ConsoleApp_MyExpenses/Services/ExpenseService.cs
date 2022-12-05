@@ -1,7 +1,4 @@
-﻿using ConsoleApp_MyExpenses.Models;
-using ConsoleApp_MyExpenses.Utlis;
-
-namespace ConsoleApp_MyExpenses.Services;
+﻿namespace ConsoleApp_MyExpenses.Services;
 
 public class ExpenseService
 {

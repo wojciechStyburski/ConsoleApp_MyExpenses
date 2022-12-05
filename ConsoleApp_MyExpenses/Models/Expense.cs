@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace ConsoleApp_MyExpenses.Models;
+﻿namespace ConsoleApp_MyExpenses.Models;
 public class Expense
 {
     public int Id { get; private set; }

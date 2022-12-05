@@ -1,6 +1,4 @@
-﻿using ConsoleApp_MyExpenses.Models;
-
-namespace ConsoleApp_MyExpenses.Services;
+﻿namespace ConsoleApp_MyExpenses.Services;
 
 public class MenuActionService
 {
