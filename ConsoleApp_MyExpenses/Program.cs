@@ -1,30 +1,7 @@
-﻿using ConsoleApp_MyExpenses.Services;
-
-const string FILE_NAME = @"c:\temp\ImportExpenses.xlsx";
-
-static MenuActionService Initialize(MenuActionService menuActionService)
-{
-    menuActionService.AddNewAction(1, "Add expense", "Main");
-    menuActionService.AddNewAction(2, "Delete expense", "Main");
-    menuActionService.AddNewAction(3, "Show expense details", "Main");
-    menuActionService.AddNewAction(4, "Show all expenses", "Main");
-    menuActionService.AddNewAction(5, "Summary expenses by type", "Main");
-
-    menuActionService.AddNewAction(1, "Food", "ExpenseTypes");
-    menuActionService.AddNewAction(2, "Clothes", "ExpenseTypes");
-    menuActionService.AddNewAction(3, "Fuel", "ExpenseTypes");
-    menuActionService.AddNewAction(4, "Bills", "ExpenseTypes");
-    menuActionService.AddNewAction(5, "Relax", "ExpenseTypes");
-    menuActionService.AddNewAction(6, "Electronics", "ExpenseTypes");
-    menuActionService.AddNewAction(7, "Other", "ExpenseTypes");
-
-    return menuActionService;
-}
+﻿const string FILE_NAME = @"c:\temp\ImportExpenses.xlsx";
 
 var menuActionService = new MenuActionService();
-menuActionService = Initialize(menuActionService);
-
-var expenseService = new ExpenseService();
+var expenseManager = new ExpenseManager(menuActionService);
 
 Console.WriteLine("Welcome to MyExpenses app!");
 while (true)
@@ -42,19 +19,22 @@ while (true)
     switch (operation.KeyChar)
     {
         case '1':
-            expenseService.AddNewExpenseView(menuActionService);
+            expenseManager.AddNewExpense();
             break;
         case '2':
-            expenseService.RemoveExpenseView();
+            expenseManager.RemoveExpense();
             break;
         case '3':
-            expenseService.ShowExpenseDetailsView();
+            expenseManager.ShowExpenseDetails();
             break;
         case '4':
-            expenseService.ShowAllExpensesView();
+            expenseManager.ShowAllExpenses();
             break;
         case '5':
-            expenseService.ShowSummaryByTypeView();
+            expenseManager.ShowSummaryByType();
+            break;
+        case '6':
+            expenseManager.ShowSummaryByDay();
             break;
         default:
             Console.Write(" => [Selected action not allowed, try again!]");

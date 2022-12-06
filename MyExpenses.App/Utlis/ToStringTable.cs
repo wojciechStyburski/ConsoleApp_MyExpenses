@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp_MyExpenses.Utlis;
+﻿using System.Diagnostics;
+using System.Text;
+
+namespace MyExpenses.App.Utlis;
 
 public static class TableParser
 {

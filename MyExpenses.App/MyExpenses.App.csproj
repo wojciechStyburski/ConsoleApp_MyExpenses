@@ -1,12 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyExpenses.App\MyExpenses.App.csproj" />
+    <ProjectReference Include="..\MyExpenses.Domain\MyExpenses.Domain.csproj" />
   </ItemGroup>
 </Project>

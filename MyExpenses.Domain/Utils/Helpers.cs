@@ -1,10 +1,10 @@
-﻿namespace ConsoleApp_MyExpenses.Utlis;
+﻿namespace MyExpenses.Domain.Utils;
 
 public class Helpers
 {
     public enum ExpenseType
     {
-        Food,
+        Food = 1,
         Clothes,
         Fuel,
         Bills,

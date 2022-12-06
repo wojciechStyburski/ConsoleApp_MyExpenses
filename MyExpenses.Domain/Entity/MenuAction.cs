@@ -1,7 +1,8 @@
-﻿namespace ConsoleApp_MyExpenses.Models;
-public class MenuAction
+﻿using MyExpenses.Domain.Common;
+
+namespace MyExpenses.Domain.Entity;
+public class MenuAction : BaseEntity
 {
-    public int Id { get; private set; }
     public string Name { get; private set; }
     public string MenuName { get; private set; }
 
